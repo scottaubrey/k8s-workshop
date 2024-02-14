@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: podinfo
+  name: podinfo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: podinfo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: podinfo
+    spec:
+      containers:
+      - image: stefanprodan/podinfo:6.5.3
+        name: podinfo
+        ports:
+        - containerPort: 9898
+        resources: {}
+status: {}

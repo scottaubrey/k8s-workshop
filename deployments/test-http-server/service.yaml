@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    run: test-http-server
+  name: test-http-server
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 80
+  selector:
+    run: test-http-server
+  type: LoadBalancer
+status:
+  loadBalancer: {}
