@@ -18,7 +18,7 @@ spec:
         app: podinfo
     spec:
       containers:
-      - image: stefanprodan/podinfo:6.5.2
+      - image: stefanprodan/podinfo:6.5.3
         name: podinfo
         ports:
         - containerPort: 9898
